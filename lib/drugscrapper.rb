@@ -8,6 +8,7 @@ class DrugScrapper
 
   def initialize
     @main_url = "http://www.rxlist.com"
+    @progress = 0 ;
   end
 
   def get_drugs_by_letter
@@ -24,7 +25,8 @@ class DrugScrapper
         drug_hash[:website] = website
         drugs << drug_hash
       end
-      
+      @progress+=(100.0/26.0).round
+      puts "scrapping...............................[#{@progress}%]" if @progress <= 100
     end
     drugs
   end
