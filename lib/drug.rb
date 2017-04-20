@@ -1,5 +1,6 @@
 class Drug
-  attr_accessor :name  :website
+
+  attr_accessor :name,  :website
 
   @@all = []
   
@@ -18,18 +19,21 @@ class Drug
   end
 
   def self.find_drugs_by_letter(letter)
-    found_drugs = @all.find_all do |drug|
+    found_drugs = @@all.find_all do |drug|
       drug.name.start_with?(letter.upcase) || drug.name.start_with?(letter.downcase)
     end
+    
   end
 
   def self.import_drugs_from_array(drugs_array)
 
     #getting info from scrapper array of hashes
+
     drugs_array.each do |drug_hash|
       drug = Drug.new(drug_hash) # using hash of attributes from scrapper
       @@all << drug unless @@all.any? {|d| d.name == drug_hash[:name]}
     end
+    
   end
   
 end

@@ -27,7 +27,7 @@ class DrugScrapper
       end
       
     end
-
+    drugs
   end
 
 
@@ -44,7 +44,6 @@ class DrugScrapper
     end
     description
   end
-  
-  
+
 end
 
