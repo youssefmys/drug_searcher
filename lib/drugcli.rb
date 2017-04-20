@@ -32,7 +32,7 @@ class Drugcli
           found_drugs.each_with_index do |drug, index|
 
             if index == user_input.to_i - 1
-              puts "Scrapping drug description from {#drug.website}"
+              puts "Scrapping drug description from #{drug.website}"
               puts "------------------------------------------------"
               puts scrapper.get_drug_description(drug.website)
               puts "------------------------------------------------"
