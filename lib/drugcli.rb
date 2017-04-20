@@ -74,7 +74,7 @@ class Drugcli
         end
 
       when "quit"
-        puts "quitig"
+        puts "quiting"
 
       else
         puts "Please inser 1,2, or quit"

@@ -22,7 +22,6 @@ class DrugScrapper
 
         website = "#{@main_url}#{drug.attribute("href")}"
         drug_hash[:website] = website
-
         drugs << drug_hash
       end
       
