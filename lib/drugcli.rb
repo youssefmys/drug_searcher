@@ -10,8 +10,8 @@ class Drugcli
     user_input = nil
 
     while user_input != "quit" do
-      puts "1- display drugs alphabitically"
-      puts "2- seach by brand name"
+      puts "1- display drugs alphabetically"
+      puts "2- seacrh by brand name"
 
       user_input = gets.chomp
 
