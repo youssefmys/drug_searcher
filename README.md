@@ -1,0 +1,1 @@
+Simple scrapping ruby CLI application and gem used for scrapping of medication info from web.  
